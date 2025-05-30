@@ -1,6 +1,6 @@
 name: Hello World Workflow - On Pull Request
 on:
-  push:
+  pull_request:
     branches: [ main ]
 
 jobs:
