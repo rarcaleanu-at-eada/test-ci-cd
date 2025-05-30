@@ -23,18 +23,19 @@ class Transformer:
 
     def _map_binary_column_to_int(self, df: pd.DataFrame) -> pd.DataFrame:
         for col in self.binary_variable_columns:
-            df[col] = df[col].map({
-                "yes": 1,
-                "no": 0})
+            df[col] = df[col].map({"yes": 1, "no": 0})
         return df
 
     def _map_month_to_int(self, df: pd.DataFrame) -> pd.DataFrame:
         month_mapping = {
             "jan": 1,
-            "feb": 2,            "mar": 3,
+            "feb": 2,
+            "mar": 3,
             "apr": 4,
-            "may": 5,            "jun": 6,
-            "jul": 7,          "aug": 8,
+            "may": 5,
+            "jun": 6,
+            "jul": 7,
+            "aug": 8,
             "sep": 9,
             "oct": 10,
             "nov": 11,
